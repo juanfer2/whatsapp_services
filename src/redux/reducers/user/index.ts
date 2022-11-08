@@ -2,7 +2,7 @@ import { emptyUser } from '@/models/user.type';
 import { createSlice } from '@reduxjs/toolkit';
 
 export const userSlice = createSlice({
-  name: 'user',
+  name: 'connection',
   initialState: { ...emptyUser, loading: false },
   reducers: {
     updateUser: (state, action) => {

@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const connectionSlice = createSlice({
-  name: 'healt',
+  name: 'connection',
   initialState: { status: 'PENDING' },
   reducers: {
     modifyStatusConnection: (_, action) => {
