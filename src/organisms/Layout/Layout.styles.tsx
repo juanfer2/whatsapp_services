@@ -8,6 +8,7 @@ const LayoutStyled = styled.div`
   main {
     width: 100%;
     padding: 20px;
+    padding-left: 50px;
 
     @media screen and (min-width: 900px) {
       margin-left: 150px;

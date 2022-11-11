@@ -15,6 +15,12 @@ export const useSocketIO = () => {
       dispatch(updateStatusConnection({ status: 'CONNECT' }));
     });
 
+    socket.on('connect_error', (err) => {
+      console.log('error', err);
+
+      dispatch(updateStatusConnection({ status: 'ERROR' }));
+    });
+
     socket.on('statusLogin', (data) => {
       dispatch(updateUser({ loading: data === 'PENDING' }));
     });

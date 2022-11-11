@@ -6,13 +6,16 @@ import { ThemeProvider } from '@emotion/react';
 import { theme } from '@/styles/theme';
 import App from './App';
 import './index.css';
+import { ChakraProvider } from '@chakra-ui/react';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </ThemeProvider>
+    <ChakraProvider>
+      <ThemeProvider theme={theme}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ThemeProvider>
+    </ChakraProvider>
   </React.StrictMode>
 );

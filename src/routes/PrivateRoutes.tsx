@@ -5,7 +5,7 @@ import { StoreState } from '@/redux/store';
 
 /* eslint no-unused-vars: ["off"] */
 function PrivateRoutes({ component: Component, redirectTo, path, ...props }: any): JSX.Element {
-  const connection = useSelector((state: StoreState) => state.connection);
+  // const connection = useSelector((state: StoreState) => state.connection);
   const user = useSelector((state: StoreState) => state.user);
   const location = useLocation();
 
