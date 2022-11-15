@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.7",
+    "@chakra-ui/textarea": "^2.0.13",
     "@emotion/css": "^11.10.0",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import {
   IoAirplaneOutline,
   IoBalloonOutline
@@ -17,7 +17,7 @@ import { useSelector } from 'react-redux';
 function Sidebar() {
   const user = useSelector((state: StoreState) => state.user);
 
-  const [isOpen, setIsOpen] = useState(true);
+  // const [isOpen, setIsOpen] = useState(true);
   // const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
     {
@@ -43,11 +43,6 @@ function Sidebar() {
       name: 'Send Messages',
       icon: <IoBalloonOutline />
     },
-    {
-      path: '/login',
-      name: 'Login',
-      icon: <IoAirplaneOutline />
-    }
   ];
 
   const listMenu = user.pushname !== '' ? privateMenuItem : menuItem;

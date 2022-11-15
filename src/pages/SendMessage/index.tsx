@@ -2,16 +2,22 @@
 import { SendMessageStyled } from './SendMessage.styles';
 import { sendMessage } from '@/services/whatsapp.service';
 import { useSendMessage } from './useSendMessage';
-import Input from '@/components/Input';
-import Button from '@/components/Button';
+import { TextArea, Button, Input, Banner } from '@/components';
+import CitizenImg from '@/assets/images/citizens.svg';
+import { useActionCallback } from '@/hooks/useActionCallback';
 
 function SendMessage() {
-  const { errors, handleSubmit, register } = useSendMessage({});
+  const { errors, handleSubmit, register } = useSendMessage({ phone: '573005138128' });
+  const { alert } = useActionCallback();
 
   const handleOnSubmit = async (data: any) => {
     try {
-      console.log(data);
       await sendMessage({ phone: data.phone, message: data.message });
+      alert({
+        title: 'Envio de whatsapp exitoso',
+        status: 'success',
+        description: `el mensaje fue enviado al número de celular ${data?.phone as string}`
+      });
     } catch (error) {
       console.log(error);
     }
@@ -19,7 +25,9 @@ function SendMessage() {
 
   return (
     <SendMessageStyled>
-      <h1>Send Message</h1>
+      <Banner imgUrl={CitizenImg} title="Send Message" />
+      <br />
+
       <form onSubmit={handleSubmit(handleOnSubmit)} className="form-cititzen">
         <div className="inputs">
           <Input
@@ -30,7 +38,7 @@ function SendMessage() {
             errorMessage={errors?.phone?.message}
           />
 
-          <Input
+          <TextArea
             name="message"
             labelName="Message"
             placeholder="Message"

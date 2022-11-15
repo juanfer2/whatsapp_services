@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { Home, Citizens, Login, SendMessage } from '@/pages';
 import PrivateRoute from './PrivateRoutes';
 import PublicRoutes from './PublicRoutes';
+import ErrorPage from '@/pages/ErrorPage';
 interface PageI {
   name: string;
   path: string;
@@ -25,6 +26,11 @@ function RoutesConfig() {
       name: 'Citizens',
       path: '/citizens',
       element: <Citizens />
+    },
+    {
+      name: 'page-error',
+      path: '/505',
+      element: <ErrorPage />
     },
     {
       name: 'page-not-found',

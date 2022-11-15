@@ -1,11 +1,10 @@
-import { ComponentEmiter, ComponentSubscription } from '@/components';
+import CitizenImg from '@/assets/images/citizens.svg';
+import Banner from '@/components/Banner';
 
 function Home() {
   return (
     <div>
-      <h2>Home</h2>
-      <ComponentEmiter />
-      <ComponentSubscription />
+      <Banner imgUrl={CitizenImg} title="Whatsapp Web" />
     </div>
   );
 }

@@ -2,3 +2,8 @@ export { default as FileItem } from './FileItem/FileItem';
 export { default as CitizenItem } from './CitizenItem/CitizenItem';
 export { default as ComponentEmiter } from './rxjs/ComponentEmiter';
 export { default as ComponentSubscription } from './rxjs/ComponentSubscription';
+export { default as TextArea } from './TextArea';
+export { default as Button } from './Button';
+export { default as Input } from './Input';
+export { default as Qr } from './Qr';
+export { default as Banner } from './Banner';

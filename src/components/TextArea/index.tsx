@@ -1,5 +1,5 @@
-import { Input as InputChakra, FormLabel } from '@chakra-ui/react';
-import { InputStyled } from './Input.styles';
+import { TextAreaStyled } from './TextArea.styles';
+import { Textarea, FormLabel } from '@chakra-ui/react';
 import { theme } from '@/styles/theme';
 
 export interface Props {
@@ -10,14 +10,14 @@ export interface Props {
   errorMessage?: any;
 }
 
-function Input({ name, labelName, placeholder, control, errorMessage }: Props) {
+function TextArea({ name, labelName, placeholder, control, errorMessage }: Props) {
   const controlRef = control?.(name) || {};
 
   return (
-    <InputStyled>
+    <TextAreaStyled>
       <div className="ciaf-input">
         <FormLabel>{labelName}</FormLabel>
-        <InputChakra
+        <Textarea
           placeholder={placeholder}
           name={name}
           {...controlRef}
@@ -26,8 +26,8 @@ function Input({ name, labelName, placeholder, control, errorMessage }: Props) {
         />
         {errorMessage && <p className="error-message">{errorMessage}</p>}
       </div>
-    </InputStyled>
+    </TextAreaStyled>
   );
 }
 
-export default Input;
+export default TextArea;

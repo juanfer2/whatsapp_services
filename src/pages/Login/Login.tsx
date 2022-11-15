@@ -5,9 +5,8 @@ import InfoLogin from './components/InfoLogin';
 import { LoginStyled } from './Login.styles';
 
 function Login() {
-  const qr = useSelector((state: StoreState) => state.qr);
-
-  console.log(qr);
+  const state = useSelector((state: StoreState) => state);
+  const { qr } = state;
 
   return (
     <LoginStyled>
