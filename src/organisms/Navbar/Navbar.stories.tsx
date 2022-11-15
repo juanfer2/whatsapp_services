@@ -4,7 +4,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/Navbar',
-  component: Navbar,
+  component: Navbar
 } as Meta;
 
 const Story = (args: any) => <Navbar {...args} />;

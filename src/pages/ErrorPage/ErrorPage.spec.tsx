@@ -3,12 +3,10 @@ import React from 'react';
 
 import ErrorPage from './index';
 
-const Props = {
-  
-};
+const Props = {};
 
 beforeEach(() => {
-	render(<ErrorPage {...Props} />);	
+  render(<ErrorPage {...Props} />);
 });
 
-test('Its rendering', () => { });
+test('Its rendering', () => {});

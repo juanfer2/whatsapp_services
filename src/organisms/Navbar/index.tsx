@@ -12,7 +12,7 @@ function Navbar() {
         <h3>
           {user.pushname} (+ {user?.wid?.user})
         </h3>
-        <IoPersonCircleOutline size={35}/>
+        <IoPersonCircleOutline size={35} />
       </div>
     </NavbarStyled>
   );

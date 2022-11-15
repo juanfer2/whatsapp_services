@@ -7,7 +7,6 @@ export interface Props {
 }
 
 function Layout({ children }: Props) {
-
   return (
     <LayoutStyled>
       <Sidebar />

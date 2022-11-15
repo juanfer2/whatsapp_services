@@ -4,7 +4,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/Input',
-  component: Input,
+  component: Input
 } as Meta;
 
 const Story = (args: any) => <Input {...args} />;

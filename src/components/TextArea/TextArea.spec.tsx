@@ -3,12 +3,10 @@ import React from 'react';
 
 import TextArea from './index';
 
-const Props = {
-  
-};
+const Props = {};
 
 beforeEach(() => {
-	render(<TextArea {...Props} />);	
+  render(<TextArea {...Props} />);
 });
 
-test('Its rendering', () => { });
+test('Its rendering', () => {});

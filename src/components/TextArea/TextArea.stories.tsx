@@ -4,7 +4,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/TextArea',
-  component: TextArea,
+  component: TextArea
 } as Meta;
 
 const Story = (args: any) => <TextArea {...args} />;

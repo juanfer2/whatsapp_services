@@ -7,3 +7,5 @@ node_modules/*
 .eslintrc.js
 .eslintrc.cjs
 .prettier.json
+
+/**/*.spec.*

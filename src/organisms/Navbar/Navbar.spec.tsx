@@ -3,12 +3,10 @@ import React from 'react';
 
 import Navbar from './index';
 
-const Props = {
-  
-};
+const Props = {};
 
 beforeEach(() => {
-	render(<Navbar {...Props} />);	
+  render(<Navbar {...Props} />);
 });
 
-test('Its rendering', () => { });
+test('Its rendering', () => {});

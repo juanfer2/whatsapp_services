@@ -42,7 +42,7 @@ function Sidebar() {
       path: '/send_message',
       name: 'Send Messages',
       icon: <IoBalloonOutline />
-    },
+    }
   ];
 
   const listMenu = user.pushname !== '' ? privateMenuItem : menuItem;

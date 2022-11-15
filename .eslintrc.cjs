@@ -6,12 +6,24 @@ module.exports = {
     jest: true
     // vitest: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard-with-typescript',
-    "plugin:prettier/recommended"
-  ],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:prettier/recommended'],
   overrides: [
+    {
+      files: ['**/*.test.ts', '**/*.spec.ts'],
+      env: {
+        jest: true // now **/*.test.js files' env has both es6 *and* jest
+      },
+      // Can't extend in overrides: https://github.com/eslint/eslint/issues/8813
+      // "extends": ["plugin:jest/recommended"]
+      plugins: ['jest'],
+      rules: {
+        'jest/no-disabled-tests': 'warn',
+        'jest/no-focused-tests': 'error',
+        'jest/no-identical-title': 'error',
+        'jest/prefer-to-have-length': 'warn',
+        'jest/valid-expect': 'error'
+      }
+    }
   ],
   parser: '@typescript-eslint/parser', // should be already existing
   parserOptions: {
@@ -23,11 +35,7 @@ module.exports = {
       jsx: true
     }
   },
-  plugins: [
-    'react',
-    'prettier',
-    'vitest'
-  ],
+  plugins: ['react', 'prettier', 'vitest'],
   globals: {
     React: true,
     google: true,
@@ -44,7 +52,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect"
+      version: 'detect'
     },
     'import/resolver': {
       node: {
@@ -53,6 +61,7 @@ module.exports = {
       }
     }
   },
+  // ignorePatterns: ['/**/*.spec.*'],
   rules: {
     'prettier/prettier': 'warn',
     'no-unused-vars': 'error',
@@ -61,9 +70,9 @@ module.exports = {
     'react/prop-types': 'off',
     'max-len': ['warn', { code: 100 }],
     '@typescript-eslint/dot-notation': 'off',
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/triple-slash-reference": "off",
-    "@typescript-eslint/strict-boolean-expressions": "off",
-    "no-unneeded-ternary": "off"
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+    'no-unneeded-ternary': 'off'
   }
-}
+};
